@@ -1,17 +1,22 @@
 <div class="card-grafica">
+    <h1>CAMBIA EL TONO DE LA IMAGEN A VINTAGE OwO</h1>
     <div class="canvas-preview">
-        <img [style.filter]="filtro()" src="https://i.redd.it/0o8hi3301ymb1.jpg">
+        <!-- <img [style.filter]="filtro()" src="https://i.redd.it/0o8hi3301ymb1.jpg"> -->
+        <!-- <img [style.filter]="filtro()" src="../../assets/img/titus.jpeg"> -->
+         <img [style.filter]="filtro()" src="https://i0.wp.com/www.americamagazine.org/wp-content/uploads/2025/11/frankenstein-netflix.jpeg?resize=1200%2C800&ssl=1">
+         
         <div class="controles">
-            <label >Brillo : {{brillo()}}</label>
+            <!-- <label >Brillo : {{brillo()}}</label>
             <input type="range" min="0" max="200" (input)="actualizar('brillo', $event)">
             <label >Contraste : {{contraste()}}</label>
             <input type="range" min="0" max="200" (input)="actualizar('contraste', $event)">
             <label >Blur : {{blur()}}</label>
-            <input type="range" min="0" max="20" (input)="actualizar('blur', $event)">
+            <input type="range" min="0" max="20" (input)="actualizar('blur', $event)"> -->
             <!-- <label >Blanco y Negro</label> -->
             <button (click)="blancoynegro()"> Blanco y Negro</button>
             <!-- <label >Restrablecer</label> -->
             <button (click)="restablecer()"> Restablecer</button>
+            <button (click)="vintage()"> Vintage</button>
         </div>
     </div>
 </div>

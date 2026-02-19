@@ -13,6 +13,7 @@ export class EditorFiltroComponent {
   contraste = signal(100);
   blur = signal(0);
   byn = signal(0);
+  sepia = signal(0);
 
   filtro = computed(()=>{
     //se supone que escucha todo para hacer lo necesario para actualizarse
@@ -20,7 +21,9 @@ export class EditorFiltroComponent {
       brightness(${this.brillo()}%) 
       contrast(${this.contraste()}%) 
       blur(${this.blur()}px) 
-      grayscale(${this.byn()}%)`;
+      grayscale(${this.byn()}%)
+      sepia(${this.sepia()}%)
+      `;
   })
   actualizar (prop: string, evento: Event){
     const valor = (evento.target as HTMLInputElement).value;
@@ -41,5 +44,12 @@ export class EditorFiltroComponent {
     this.contraste.set(100);
     this.blur.set(0);
     this.byn.set(0);
+  }
+  vintage(){
+    this.brillo.set(115);
+    this.contraste.set(85);
+    this.blur.set(0.5);
+    this.byn.set(30);
+    this.sepia.set(25);
   }
 }

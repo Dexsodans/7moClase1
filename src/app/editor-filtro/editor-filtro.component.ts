@@ -12,11 +12,15 @@ export class EditorFiltroComponent {
   brillo = signal(100);
   contraste = signal(100);
   blur = signal(0);
+  byn = signal(0);
 
   filtro = computed(()=>{
     //se supone que escucha todo para hacer lo necesario para actualizarse
-    //el chanfle tiene sida xdd 
-    return `brightness(${this.brillo()}%) contrast(${this.contraste()}%) blur(${this.blur()}px)`;
+    return `
+      brightness(${this.brillo()}%) 
+      contrast(${this.contraste()}%) 
+      blur(${this.blur()}px) 
+      grayscale(${this.byn()}%)`;
   })
   actualizar (prop: string, evento: Event){
     const valor = (evento.target as HTMLInputElement).value;
@@ -27,5 +31,15 @@ export class EditorFiltroComponent {
     } else if (prop === 'blur') {
       this.blur.set(+valor);
     }
+  }
+
+  blancoynegro (){
+    this.byn.set(100);
+  }
+  restablecer (){
+    this.brillo.set(100);
+    this.contraste.set(100);
+    this.blur.set(0);
+    this.byn.set(0);
   }
 }

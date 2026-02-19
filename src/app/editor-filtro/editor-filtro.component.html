@@ -8,6 +8,10 @@
             <input type="range" min="0" max="200" (input)="actualizar('contraste', $event)">
             <label >Blur : {{blur()}}</label>
             <input type="range" min="0" max="20" (input)="actualizar('blur', $event)">
+            <!-- <label >Blanco y Negro</label> -->
+            <button (click)="blancoynegro()"> Blanco y Negro</button>
+            <!-- <label >Restrablecer</label> -->
+            <button (click)="restablecer()"> Restablecer</button>
         </div>
     </div>
 </div>

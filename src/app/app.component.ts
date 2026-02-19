@@ -5,8 +5,8 @@ import { EditorFiltroComponent } from './editor-filtro/editor-filtro.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, EditorFiltroComponent],
-  templateUrl: './editor-filtro/editor-filtro.component.html',
+  imports: [EditorFiltroComponent],
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
